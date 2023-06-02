@@ -63,6 +63,11 @@ header p {
     margin-top: 30px;
 }
 
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+    transition: outline 0.2s;
+}
+
 #switch button {
     position: absolute;
     z-index: 1;
@@ -78,6 +83,8 @@ header p {
     background: white var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
+
+    animation: slide-back 0.3s;
 }
 
 #switch span {
@@ -92,12 +99,6 @@ header p {
     border-radius: 999px;
 }
 
-.light #switch button {
-    right: 0;
-    left: initial;
-    background: white var(--switch-bg-url) no-repeat bottom;
-    
-}
 
 
 section {
@@ -124,6 +125,11 @@ section button:hover {
     border: 1px solid var(--border-color-hover);
     background-color: var(--button-bg-hover);
     transition: background 0.3s;
+}
+
+.light #switch button {
+    animation: slide-in 0.3s forwards;
+    background: white var(--switch-bg-url) no-repeat bottom;
 }
 
 section p {
@@ -195,5 +201,23 @@ footer {
 
     small {
         font-size: 0.75em;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }

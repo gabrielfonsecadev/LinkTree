@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100&display=swap');
+
+:root {
+    --text-color: white;
+    --border-color: rgba(196, 196, 196, 0.652);
+    --grey-text-color: rgb(228, 228, 228);
+    --button-bg-hover: #ffffff26;
+    --button-bg: #ffffff18;
+    --border-color-hover: rgba(255, 255, 255, 0.652);
+    --highlight-color: rgba(151, 151, 151, 0.228);
+    --switch-bg-url: url(assets/moon-icon.svg);
+    background: url(assets/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.light {
+    --text-color: black;
+    --border-color: rgba(44, 44, 44, 0.652);
+    --grey-text-color: rgb(0, 0, 0);
+    --button-bg-hover: #b4b4b437;
+    --button-bg: rgba(214, 214, 214, 0.1);
+    --border-color-hover: rgba(6, 6, 6, 0.985);
+    --switch-bg-url: url(assets/sun-icon.svg);
+    background: url(assets/bg-desktop-light.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    width: 600px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+
+header {
+    text-align: center;
+    color: var(--grey-text-color);
+    margin-top: 90px;
+}
+
+header>img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: var(--border-color);
+}
+
+header p {
+    margin-top: 7px;
+}
+
+#switch {
+    width: 64px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#switch button {
+    position: absolute;
+    z-index: 1;
+
+    width: 64px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+}
+
+#switch span {
+    display: block;
+    z-index: 0;
+    width: 62px;
+    height: 24px;
+
+    -webkit-backdrop-filter: blur(4px);
+    background: var(--button-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+    background: white var(--switch-bg-url) no-repeat bottom;
+    
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+}
+
+section button {
+    width: 600px;
+    line-height: 50px;
+    border-radius: 7px;
+    color: var(--text-color);
+    font-size: 1em;
+
+    border: 1px solid var(--border-color);
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+section button:hover {
+    border: 1px solid var(--border-color-hover);
+    background-color: var(--button-bg-hover);
+    transition: background 0.3s;
+}
+
+section p {
+    color: var(--grey-text-color);
+    margin: 0px;
+}
+
+
+figure {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+figure a {
+    transition: background 0.2s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+ion-icon {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    color: var(--text-color);
+}
+
+figure a:hover {
+    background-color: var(--highlight-color);
+}
+
+
+footer {
+    text-align: center;
+    color: var(--grey-text-color);
+    padding-bottom: 30px;
+}
+
+
+@media (max-width: 768px) {
+    :root {
+        background: url(assets/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .light {
+        background: url(assets/bg-mobile-light.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    body {
+    width: 350px;
+    }
+
+    section button {
+        width: 320px;
+    }
+
+    p{
+        font-size: 0.9em;
+    }
+
+    small {
+        font-size: 0.75em;
+    }
+}

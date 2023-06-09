@@ -6,7 +6,7 @@
   <img alt="projeto LinkTree" src=".github/Cover.png" width="100%">
 </p>
 
-## <a href="">Acesse o projeto finalizado aqui!</a>
+## <a href="https://gabrielfonsecadev.github.io/LinkTree/" target="_blank">Acesse o projeto finalizado aqui!</a>
 
 ## 🚀 Tecnologias
 
